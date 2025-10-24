@@ -1,0 +1,23 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/Maxxx1ne/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Maxxx1ne/frontend-project-46/actions)",
+  "main": "bin/gendiff.js",
+  "type": "module",
+  "bin": {
+  "gendiff": "./bin/gendiff.js"
+},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxxx1ne/frontend-project-46.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maxxx1ne/frontend-project-46/issues"
+  },
+  "homepage": "https://github.com/Maxxx1ne/frontend-project-46#readme"
+}
