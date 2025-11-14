@@ -6,7 +6,7 @@ import getFormatter from './formatters/index.js'
 
 const getAbsolutePath = filepath => path.resolve(process.cwd(), filepath)
 
-const readFile = filepath => {
+const readFile = (filepath) => {
   const absolutePath = getAbsolutePath(filepath)
   return readFileSync(absolutePath, 'utf-8')
 }
