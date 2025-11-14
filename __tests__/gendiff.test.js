@@ -4,7 +4,7 @@ import genDiff from '../src/index.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename)
+const getFixturePath = filename => path.join(__dirname, '..', '__fixtures__', filename)
 
 test('flat JSON files', () => {
   const file1 = getFixturePath('file1flat.json')
@@ -49,9 +49,9 @@ test('plain format', () => {
   const file2 = getFixturePath('file2.json')
   const result = genDiff(file1, file2, 'plain')
 
-  expect(result).toContain("Property 'common.follow' was added with value: false")
-  expect(result).toContain("Property 'common.setting2' was removed")
-  expect(result).toContain("Property 'common.setting3' was updated. From true to null")
+  expect(result).toContain('Property \'common.follow\' was added with value: false')
+  expect(result).toContain('Property \'common.setting2\' was removed')
+  expect(result).toContain('Property \'common.setting3\' was updated. From true to null')
 })
 
 test('stylish format by default', () => {
