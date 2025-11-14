@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from 'lodash'
 
 const formatValue = (value) => {
   if (_.isPlainObject(value)) {
@@ -29,11 +29,11 @@ const plain = (tree, path = '') => {
       case 'nested':
         return plain(node.children, currentPath)
       case 'unchanged':
-        return [];
+        return []
       default:
         throw new Error(`Unknown node type: ${node.type}`)
     }
-  });
+  })
 
   return lines.join('\n')
 }

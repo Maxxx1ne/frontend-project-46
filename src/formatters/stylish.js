@@ -29,7 +29,7 @@ const stylish = (tree, depth = 1) => {
         return [
           `${indent}- ${node.key}: ${formatValue(node.value1, depth + 1)}`,
           `${indent}+ ${node.key}: ${formatValue(node.value2, depth + 1)}`,
-        ].join('\n');
+        ].join('\n')
       case 'nested':
         return `${indent}  ${node.key}: ${stylish(node.children, depth + 1)}`
       default:

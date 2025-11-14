@@ -4,14 +4,14 @@ import _ from 'lodash'
 import parse from './parsers.js'
 import getFormatter from './formatters/index.js'
 
-const getAbsolutePath = (filepath) => path.resolve(process.cwd(), filepath)
+const getAbsolutePath = filepath => path.resolve(process.cwd(), filepath)
 
 const readFile = (filepath) => {
   const absolutePath = getAbsolutePath(filepath)
   return readFileSync(absolutePath, 'utf-8')
 }
 
-const getFormat = (filepath) => path.extname(filepath).slice(1)
+const getFormat = filepath => path.extname(filepath).slice(1)
 
 const buildTree = (obj1, obj2) => {
   const keys1 = Object.keys(obj1)
