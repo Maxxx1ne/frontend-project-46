@@ -4,7 +4,9 @@ const formatValue = (value, depth) => {
   if (_.isPlainObject(value)) {
     const indent = ' '.repeat(depth * 4);
     const bracketIndent = ' '.repeat((depth - 1) * 4);
-    const lines = Object.entries(value).map(([key, val]) => `${indent}  ${key}: ${formatValue(val, depth + 1)}`);
+    const lines = Object.entries(value).map(([key, val]) => {
+      return `${indent}  ${key}: ${formatValue(val, depth + 1)}`;
+    });
     return ['{', ...lines, `${bracketIndent}}`].join('\n');
   }
 
